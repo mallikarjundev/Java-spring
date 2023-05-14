@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Scope("prototype")
 public class Instructor {
 
-	@Value("10")
+	@Value("#{T(java.lang.Math).abs(-12)}")
 	int id;
 	@Value("Arjun O")
 	String name;
