@@ -13,7 +13,7 @@ public class Instructor {
 
 	@Value("#{new Integer(21)}")
 	int id;
-	@Value("#{'Arjun O'.toUpperCase()}")
+	@Value("#{new java.lang.String('Arjun O')}")
 	String name;
 
 	@Value("#{topics}")
