@@ -18,7 +18,10 @@ public class Instructor {
 
 	@Value("#{topics}")
 	private List<String> topics;
-	
+
+	@Value("#{2+4>5}")
+	private boolean active;
+
 	@Autowired
 	private Profile profile;
 
@@ -40,9 +43,8 @@ public class Instructor {
 
 	@Override
 	public String toString() {
-		return "Instructor [id=" + id + ", name=" + name + ", topics=" + topics + ", profile=" + profile + "]";
+		return "Instructor [id=" + id + ", name=" + name + ", topics=" + topics + ", active=" + active + ", profile="
+				+ profile + "]";
 	}
-
-	
 
 }
