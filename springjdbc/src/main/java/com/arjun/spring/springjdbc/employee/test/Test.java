@@ -18,8 +18,9 @@ public class Test {
 		employee.setFirstName("Micheal");
 		employee.setLastName("Kama");
 //		int result = dao.create(employee);
-		int result = dao.update(employee);
-		System.out.println("Number of records updated are: " + result);
+//		int result = dao.update(employee);
+		int result = dao.delete(1);
+		System.out.println("Number of records deleted are: " + result);
 	}
 
 }

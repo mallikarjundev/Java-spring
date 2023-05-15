@@ -23,6 +23,13 @@ public class EmployeeDaoImpl implements EmployeeDao {
 		return result;
 	}
 
+	@Override
+	public int delete(int id) {
+		String sql = "delete from employee where id=?";
+		int result = jdbcTemplate.update(sql, id);
+		return result;
+	}
+
 	public JdbcTemplate getJdbcTemplate() {
 		return jdbcTemplate;
 	}
