@@ -30,6 +30,12 @@ public class EmployeeDaoImpl implements EmployeeDao {
 		return result;
 	}
 
+	@Override
+	public Employee read(int id) {
+		String sql = "select * from employee where id=?";
+		jdbcTemplate.queryForObject(sql, rowMapper, id);
+		return null;
+	}
 	public JdbcTemplate getJdbcTemplate() {
 		return jdbcTemplate;
 	}
@@ -37,5 +43,6 @@ public class EmployeeDaoImpl implements EmployeeDao {
 	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
 		this.jdbcTemplate = jdbcTemplate;
 	}
+
 
 }
