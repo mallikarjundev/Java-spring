@@ -15,10 +15,11 @@ public class Test {
 		EmployeeDao dao = (EmployeeDao) context.getBean("employeeDao");
 		Employee employee = new Employee();
 		employee.setId(2);
-		employee.setFirstName("John");
-		employee.setLastName("B");
-		int result = dao.create(employee);
-		System.out.println("Number of records inserted are: " + result);
+		employee.setFirstName("Micheal");
+		employee.setLastName("Kama");
+//		int result = dao.create(employee);
+		int result = dao.update(employee);
+		System.out.println("Number of records updated are: " + result);
 	}
 
 }

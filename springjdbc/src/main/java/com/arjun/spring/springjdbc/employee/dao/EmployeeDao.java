@@ -5,4 +5,5 @@ import com.arjun.spring.springjdbc.employee.dto.Employee;
 public interface EmployeeDao {
 
 	int create(Employee employee);
+	int update(Employee employee);
 }
