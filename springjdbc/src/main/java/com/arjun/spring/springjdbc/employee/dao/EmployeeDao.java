@@ -1,5 +1,7 @@
 package com.arjun.spring.springjdbc.employee.dao;
 
+import java.util.List;
+
 import com.arjun.spring.springjdbc.employee.dto.Employee;
 
 public interface EmployeeDao {
@@ -11,4 +13,6 @@ public interface EmployeeDao {
 	int delete(int id);
 
 	Employee read(int id);
+
+	List<Employee> read();
 }

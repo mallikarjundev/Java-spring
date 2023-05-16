@@ -1,5 +1,7 @@
 package com.arjun.spring.springjdbc.employee.test;
 
+import java.util.List;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -20,8 +22,9 @@ public class Test {
 //		int result = dao.create(employee);
 //		int result = dao.update(employee);
 //		int result = dao.delete(1);
-		Employee employee = dao.read(2);
-		System.out.println("employee record" + employee);
+//		Employee employee = dao.read(2);
+		List<Employee> result = dao.read();
+		System.out.println("employee record" + result);
 	}
 
 }
