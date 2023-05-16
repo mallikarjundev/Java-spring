@@ -1,4 +1,4 @@
-package com.arjun.spring.springorm.entity;
+package com.arjun.spring.springorm.product.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
