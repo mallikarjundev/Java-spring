@@ -3,6 +3,7 @@ package com.arjun.spring.springjdbc.employee.dao.impl;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import com.arjun.spring.springjdbc.employee.dao.EmployeeDao;
+import com.arjun.spring.springjdbc.employee.dao.rowmapper.EmployeeRowMapper;
 import com.arjun.spring.springjdbc.employee.dto.Employee;
 
 public class EmployeeDaoImpl implements EmployeeDao {
@@ -33,9 +34,11 @@ public class EmployeeDaoImpl implements EmployeeDao {
 	@Override
 	public Employee read(int id) {
 		String sql = "select * from employee where id=?";
-		jdbcTemplate.queryForObject(sql, rowMapper, id);
-		return null;
+		EmployeeRowMapper rowMapper = new EmployeeRowMapper();
+		Employee employee = jdbcTemplate.queryForObject(sql, rowMapper, id);
+		return employee;
 	}
+
 	public JdbcTemplate getJdbcTemplate() {
 		return jdbcTemplate;
 	}
@@ -43,6 +46,5 @@ public class EmployeeDaoImpl implements EmployeeDao {
 	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
 		this.jdbcTemplate = jdbcTemplate;
 	}
-
 
 }
