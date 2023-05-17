@@ -13,14 +13,16 @@ public class Test {
 		ApplicationContext context = new ClassPathXmlApplicationContext(
 				"com/arjun/spring/springorm/product/test/config.xml");
 		ProductDao productDao = (ProductDao) context.getBean("productDao");
-		Product product = new Product();
-		product.setId(1);
-		product.setName("Iphone");
-		product.setDesc("Awww");
-		product.setPrice(9000);
+//		Product product = new Product();
+//		product.setId(1);
+//		product.setName("Iphone");
+//		product.setDesc("Awww");
+//		product.setPrice(9000);
 //		productDao.create(product);
 //		productDao.update(product);
-		productDao.delete(product);
+//		productDao.delete(product);
+		Product product = productDao.find(1);
+		System.out.println(product);
 	}
 
 }
