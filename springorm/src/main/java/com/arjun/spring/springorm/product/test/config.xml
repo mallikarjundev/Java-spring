@@ -31,7 +31,7 @@
 		</property>
 		<property name="annotatedClasses">
 			<list>
-				<value>com.arjun.spring.springorm.product.entitycom.arjun.spring.springorm.product.entity.Product
+				<value>com.arjun.spring.springorm.product.entity.Product
 				</value>
 
 			</list>
