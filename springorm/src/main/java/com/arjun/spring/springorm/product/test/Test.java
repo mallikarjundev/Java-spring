@@ -1,5 +1,7 @@
 package com.arjun.spring.springorm.product.test;
 
+import java.util.List;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -21,8 +23,9 @@ public class Test {
 //		productDao.create(product);
 //		productDao.update(product);
 //		productDao.delete(product);
-		Product product = productDao.find(1);
-		System.out.println(product);
+//		Product product = productDao.find(1);
+		List<Product> products = productDao.findAll();
+		System.out.println(products);
 	}
 
 }

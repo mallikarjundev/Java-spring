@@ -1,5 +1,7 @@
 package com.arjun.spring.springorm.product.dao.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.stereotype.Component;
@@ -40,6 +42,12 @@ public class ProductDaoImpl implements ProductDao {
 
 		Product product = hibernateTemplate.get(Product.class, id);
 		return product;
+	}
+
+	@Override
+	public List<Product> findAll() {
+		List<Product> products = hibernateTemplate.loadAll(Product.class);
+		return products;
 	}
 
 }
