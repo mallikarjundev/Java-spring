@@ -17,5 +17,13 @@
 	out.println("Salary:" + salary);
 	%>
 
+	<br /> 
+	Id:
+	<b>${id}</b> 
+	Name:
+	<b>${name}</b> 
+	Salary:
+	<b>${salary}</b>
+
 </body>
 </html>
