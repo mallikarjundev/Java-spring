@@ -7,6 +7,15 @@
 <title>Hello</title>
 </head>
 <body>
-	<h1>Hello from spring mvc</h1>
+
+	<%
+	Integer id = (Integer) request.getAttribute("id");
+	String name = (String) request.getAttribute("name");
+	Integer salary = (Integer) request.getAttribute("salary");
+	out.println("ID:" + id);
+	out.println("Name:" + name);
+	out.println("Salary:" + salary);
+	%>
+
 </body>
 </html>
