@@ -29,6 +29,14 @@
 			<version>1.2</version>
 		</dependency>
 		<!--
+		https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-servlet-api -->
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-servlet-api</artifactId>
+			<version>11.0.0-M5</version>
+		</dependency>
+
+		<!--
 		https://mvnrepository.com/artifact/javax.servlet.jsp/javax.servlet.jsp-api -->
 		<dependency>
 			<groupId>javax.servlet.jsp</groupId>
