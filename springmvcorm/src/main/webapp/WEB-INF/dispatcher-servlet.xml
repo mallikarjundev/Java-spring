@@ -16,7 +16,7 @@
 		base-package="com.arjun.spring.springmvcorm.user" />
 	<bean
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource"
-		name="dataSource" p:driverClassName="com.mysql.jdbc.Driver"
+		name="dataSource" p:driverClassName="com.mysql.cj.jdbc.Driver"
 		p:url="jdbc:mysql://localhost/mydb" p:username="root"
 		p:password="Navyasree50" />
 
