@@ -16,5 +16,7 @@ Email: <input type="text" name="email" />
 		 </pre>
 		<input type="submit" name="register" />
 	</form>
+
+	<br /> ${result}
 </body>
 </html>
