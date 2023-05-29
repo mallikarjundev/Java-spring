@@ -35,6 +35,9 @@ public class UserController {
 	@RequestMapping("getUsers")
 	public String getUsers(ModelMap model) {
 		List<User> users = service.getUsers();
+		for (User user: users) {
+			System.out.println(user.getId() + ":: " + user.getEmail() + "::" + user.getName());
+		}
 		model.addAttribute("users", users);
 		return "displayUsers";
 	}
