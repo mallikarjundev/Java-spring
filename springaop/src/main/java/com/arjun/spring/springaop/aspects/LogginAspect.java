@@ -8,13 +8,13 @@ import org.aspectj.lang.annotation.Before;
 @Aspect
 public class LogginAspect {
 
-	@Before("")
+	@Before("execution(* com.arjun.spring.springaop.ProductServiceImpl.multiply(..))")
 	public void logBefore(JoinPoint joinPoint) {
 
 		System.out.println("Before calling the method");
 	}
 
-	@After("")
+	@After("execution(* com.arjun.spring.springaop.ProductServiceImpl.multiply(..))")
 	public void logAfter(JoinPoint joinPoint) {
 
 		System.out.println("After method execution");
