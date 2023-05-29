@@ -22,6 +22,10 @@
 				},
 				success : function(responseText) {
 
+					$("#errMsg").text(responseText);
+					if (responseText != "") {
+						$("#id").focus();
+					}
 				}
 			});
 		});
@@ -34,7 +38,7 @@
 
 	<form action="registerUser" method="post">
 		<pre>
-Id: <input type="text" name="id" id="id" />
+Id: <input type="text" name="id" id="id" /><span id="errMsg"></span>
 Name: <input type="text" name="name" />
 Email: <input type="text" name="email" />
 		 </pre>
