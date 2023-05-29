@@ -17,6 +17,6 @@ public class LogginAspect {
 	@After("execution(* com.arjun.spring.springaop.ProductServiceImpl.multiply(..))")
 	public void logAfter(JoinPoint joinPoint) {
 
-		System.out.println("After method execution");
+		System.out.println("After method invoation");
 	}
 }
