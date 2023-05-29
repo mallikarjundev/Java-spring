@@ -18,7 +18,7 @@
 
 				url : 'validateEmail',
 				data : {
-					id : $("#id").value()
+					id : $("#id").val()
 				},
 				success : function(responseText) {
 
