@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Import;
 @Import(DaoConfig.class)
 public class SpringConfig {
 
-	@Bean
+	@Bean(initMethod = "init", destroyMethod = "destroy")
 	public Service service() {
 		return new Service();
 	}
